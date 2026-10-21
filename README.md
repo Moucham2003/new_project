@@ -9,6 +9,7 @@ A simple weather website. Type a city name, click the button, and the current we
 | `index.html` | Page structure: input box, button and result area |
 | `style.css` | Layout and styling |
 | `script.js` | Fetches the weather and updates the page |
+| `effects.js` | Animated background and color theme that change with the weather |
 
 ## How to run
 
@@ -25,6 +26,22 @@ The app uses [Open-Meteo](https://open-meteo.com/), a free weather API.
 1. **Geocoding:** the city name is sent to `https://geocoding-api.open-meteo.com/v1/search`, which returns the latitude and longitude.
 2. **Weather:** those coordinates are sent to `https://api.open-meteo.com/v1/forecast`, which returns the current conditions.
 3. The result is shown on the page: temperature (°C), condition, feels-like temperature, humidity, wind speed and rain.
+
+## Visual effects
+
+`effects.js` changes the page theme and draws an animated background based on the weather:
+
+| Weather | Effect |
+|---------|--------|
+| Clear (day) | Glowing sun |
+| Clear (night) | Moon and twinkling stars |
+| Cloudy | Drifting clouds |
+| Rain | Falling rain |
+| Thunderstorm | Heavy rain with lightning flashes |
+| Snow | Drifting snowflakes |
+| Fog | Slow-moving mist |
+
+If your system has "reduce motion" turned on, the background is drawn as a still image instead of animating.
 
 ## Error handling
 
